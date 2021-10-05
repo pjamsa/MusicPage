@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Document</title>
+</head>
+<body>
+     <!--Nav-->
+     <div class="wrap">
+         <div class="navbar-container">
+             <ul class="navbar">
+                 <a href="#home"><li>HOME</li></a>
+                 <a href="#discography"><li>DISCOGRAPHY</li></a>
+                 <a href="#videos"><li>VIDEOS</li></a>
+                 <a href="#contact"><li>CONTACT</li></a>
+             </ul>
+         </div>
+     </div>
+     <!--END NAV-->
+
+     <!--HOME -->
+     <div id="home" class="homeLink">
+         <div class="home-container">
+             <span class="head-main">PLEASE DON'T LEAVE THE LIGHTS ON<br>
+            FIVE YEAR ANNIVERSARY</span>
+             <img src="images/please.jpg" alt="album cover" width="450px" height="450px">
+         </div>
+     </div>
+
+     <!-- GALLERY -->
+     <section id="discography">
+        <div class="container">
+            <h1 class="heading-padding">DISCOGRAPHY</h1>
+            <div class="flex-container">
+
+                
+                <!-- PHOTO CONTAINER 1 --> 
+                <div class="photo-container">
+                    <div class="photo" id="one">
+                        <img src="images/yonder.jpg" alt="" width="300" height="300">
+                        <div class="photo-overlay">
+                            <h3 class="white-head" >SINGLE: YONDER</h3>
+                        </div>
+                    </div>
+                </div>
+                <!---- END PHOTO CONTAINER 1 -->
+
+                <!---- PHOTO CONTAINER 2 -->
+                <div class="photo-container">
+                    <div class="photo" id="two">
+                        <img src="images/dark.jpg" alt="" width="300" height="300"> 
+                        <div class="photo-overlay">
+                            <h3 class="white-head">EP: LOVE SONGS AFTER DARK</h3>  
+                        </div>
+                    </div>
+                </div>
+                <!---- END PHOTO CONTAINER 2 -->
+
+                <!---- PHOTO CONTAINER 3 -->
+                <div class="photo-container">
+                    <div class="photo" id="three">
+                        <img src="images/waltz.jpg" alt="" width="300" height="300">
+                        <div class="photo-overlay">
+                            <h3 class="white-head">EP: WALTZ IN THE CLOUDS</h3>   
+                        </div>
+                    </div>
+                </div>
+                
+                <!--END PHOTO CONTAINER 3-->
+
+                <!--PHOTO CONTAINER 4 -->
+                <div class="photo-container">
+                    <div class="photo" id="four">
+                        <img src="images/please.jpg" alt="" width="300" height="300">
+                        <div class="photo-overlay">
+                            <h3 class="white-head">ALBUM: PLEASE DON'T LEAVE THE LIGHTS ON</h3> 
+                        </div>
+                    </div>
+                </div> 
+                <!---- END PHOTO CONTAINER 4 ------->
+            </div>
+        </div>
+    </section>
+    <!-- END GALLERY-->
+
+    <!-- The Modal/Lightbox -->
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<div class="modal-content">
+		    <div class="mySlides">
+                <iframe src="https://open.spotify.com/embed/album/6gjHXLqaGNjJYFrgTeyGtJ" 
+                width="100%" height="380" frameBorder="0" allowtransparency="true" 
+                allow="encrypted-media"></iframe>
+            </div>
+            
+            <div class="mySlides">
+                <iframe src="https://open.spotify.com/embed/album/6thgJU07LxNEERqqbw6lLg" 
+                width="100%" height="380" frameBorder="0" allowtransparency="true" 
+                allow="encrypted-media"></iframe>
+            </div>
+            
+            <div class="mySlides">
+                <iframe src="https://open.spotify.com/embed/album/1UfdUiRBHmR2CQjCW5R1Z5" 
+                width="100%" height="380" frameBorder="0" allowtransparency="true" 
+                allow="encrypted-media"></iframe>
+            </div>
+            
+            <div class="mySlides">
+                <iframe src="https://open.spotify.com/embed/album/4I08GQauP4ahowzJP28DCG" 
+                width="100%" height="380" frameBorder="0" allowtransparency="true" 
+                allow="encrypted-media"></iframe>
+            </div>
+            
+            <!-- Next/previous controls -->
+
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            
+
+            <div class="column">
+				<img id="demoOne" class="demo" src="images/yonder.jpg"  alt="" >
+                <img id="demoTwo" class="demo" src="images/dark.jpg"  alt="">
+                <img id="demoThree" class="demo" src="images/waltz.jpg" alt="">
+                <img id="demoFour" class="demo" src="images/please.jpg"  alt="">
+			</div>
+        </div>
+    </div>
+
+    <!-- VIDEOS-->
+
+    <div id="videos">
+        <div class="text-center">
+            <h1>WATCH</h1>
+            <div class="iframe-container">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/MPcNg5-LC2o" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+		
+	<!-- END VIDEOS -->
+
+    <!-- CONTACT FORM -->
+    <section id="contact">
+        <div class="container">
+            <div class="heading-padding">
+                <div class="reservation">
+                    <h1>SIGN UP FOR UPDATES</h1>
+                    <div class="form-rsvp">
+                        <form action="https://formspree.io/f/xdoydeda" method="post">
+                            <input class="rsvp" type="text" value="" name="name" placeholder="First Name" required>
+                            <input class="rsvp" type="text" value="" name="name" placeholder="Last Name" required>
+                            <input class="rsvp" type="text" value="" name="name" placeholder="Email Address" required>
+                            <input class="rsvp" type="text" value="" name="name" placeholder="Phone Number" required>
+                            <div class="submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT FORM -->
+
+    <script src="app.js"></script>  
+
+</body>
+</html>

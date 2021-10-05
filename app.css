@@ -1,0 +1,407 @@
+html,body {
+    overflow-x: hidden;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 62.5%; /* 1rem = 10px formula */
+}
+
+body {
+    margin: 0;
+    background-color: #5c6b73;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.heading-padding {
+    padding-bottom: 30px;
+}
+
+/*----------------------------------NAVBAR--------------------------------*/
+.wrap {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden; /*content clipped to fit padding box if necessary */
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.navbar-container {
+    max-height: 340px;
+    margin: 0% auto;
+    width: 100%;
+    position: fixed; /* navbar stays in place */
+    z-index: 1; /*layer priority */
+}
+
+.navbar {
+    font: bold 14px/18px sans-serif; /* font-size/line-height */
+    display: inline;
+    margin: 0% auto;
+    padding: 0;
+    text-decoration: none; /* no underline */
+    list-style: none;  /* gets rid of bullet points */
+}
+
+
+.navbar li {
+    padding: 15px 3%;
+    border: 0;
+    display: inline-block; /* unlike inline i/block allows to set width and height */
+    position: relative; 
+    color: black;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.navbar li:hover {
+    color: #fff;
+    background-color: rgba(243, 241, 239, 0.2); 
+}
+
+/*---------------------------- HOME ----------------------*/
+#home {
+    /* makes sure the photo only displays once while center it */  
+    background: url(../MusicPage/images/background_flowers.jfif) no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    display: block; 
+    height: auto;
+    padding-top: 200px;
+    padding-bottom: 300px;
+}
+
+#home img {
+    padding: 0;
+    display: block;
+    margin: 20px auto;
+    max-height: 100%;
+    max-width: 100%;    
+}
+
+.home-container {
+    text-align: center;
+}
+
+.head-main {
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 5px rgba(72, 18, 85, 0.9);
+}
+
+/* ----------------------------------------- GALLERY ----------------------------------------- */
+
+.container h1 {
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 5px rgba(72, 18, 85, 0.9);
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-container {
+    text-align: center;
+    margin: 15px auto;
+    width: 300px;
+    height: 300px;
+}
+
+.photo {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 2em;
+    overflow: hidden;
+    border-radius: 0px;
+    padding: 1px;
+}
+
+.photo-container img {
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+}
+
+
+.photo-overlay {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0, 0.5);
+    opacity: 0;
+    transition: opacity .5s;
+    cursor: pointer;
+}
+
+.white-head {
+    color: #fff;
+    margin-top: 50%;
+}
+
+.photo-overlay:hover {
+    opacity: 1;
+}
+
+.photo img {
+    transition: transform .5s;
+    transform-origin: 50% 50%;
+}
+
+.photo:hover img {
+    transform: scale(1.01);
+}
+
+/*---------------------------- MODAL --------------------------------*/
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  img {
+    margin-bottom: -4px;
+  }
+  
+  
+  .demo {
+    opacity: 0.6;
+    width: 25%;
+    height: 25%;
+  }
+
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+
+/*----------------------------VIDEO -------------------------------*/
+
+.text-center h1 {
+    font-size: 3em;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 5px rgba(72, 18, 85, 0.9);
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+}
+
+/*------------------------------- CONTACT ---------------------------*/
+.reservation h1 {
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    letter-spacing: 0;
+    text-shadow: 2px 4px 5px rgba(72, 18, 85, 0.9);
+}
+#contact {
+    /* background-color: #253237; */
+    background: url('../MusicPage/images/background_flowers.jfif') no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    display: block; 
+}
+
+.reservation {
+    width: 80%;
+    padding: 10px;
+    margin: 0px auto;
+}
+
+.form-rsvp {
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color: #8d8e8f;
+    padding: 12px 12px;
+    margin: 2% auto;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.reservation form {
+    margin: 20px;
+}
+
+.reservation input[type="text"] {
+    font-size: 15px;
+    outline: none;
+    font-weight: 400;
+    color: black;
+    padding: 1%;
+    width: 80%;
+    margin: 2px 1em;
+    background: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    border-radius: 5px;
+
+}
+
+.reservation input[type="text"]:hover {
+    box-shadow: 0 0 18px pink;
+}
+
+.submit input[type="submit"] {
+    color: black;
+    cursor: pointer;
+    border: none;
+    font-weight: 900;
+    outline: none;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin: 20px;
+    padding: 10px 15px;
+    font-size: 0.7em;
+    transition: border-color 0.3s color 0.3s background-color 0.3s;
+    border-radius: 7px;
+    background-color: #797a7b;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.3);
+}
+
+.submit input[type="submit"]:hover {
+    color: #000;
+    background-color: #8d838f;
+    box-shadow: inset 1px 2px 15px 0 rgba(0,0,0,0.5);
+}
+
+
+
